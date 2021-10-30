@@ -55,6 +55,10 @@ public class Posts {  //실제 DB 테이블과 매칭 될 클래스이며 보통
 
  */
 
+    public void update(String title, String content){
+        this.title = title;
+        this.content = content;
+    }
 
 
 }

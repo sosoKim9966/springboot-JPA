@@ -1,7 +1,9 @@
 package com.study.springbootjpa.web;
 
 import com.study.springbootjpa.service.posts.PostsService;
+import com.study.springbootjpa.web.dto.PostsResponseDto;
 import com.study.springbootjpa.web.dto.PostsSaveRequestDto;
+import com.study.springbootjpa.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
