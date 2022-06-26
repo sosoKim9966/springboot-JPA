@@ -14,13 +14,13 @@ public class PostsSaveRequestDto {
     private String author;
 
     @Builder
-    public PostsSaveRequestDto(String title, String content, String author){
+    public PostsSaveRequestDto(String title, String content, String author) {
         this.title = title;
         this.content = content;
         this.author = author;
     }
 
-    public Posts toEntity(){
+    public Posts toEntity() {
         return Posts.builder()
                 .title(title)
                 .content(content)
@@ -36,10 +36,6 @@ public class PostsSaveRequestDto {
     View Layer/DB Layer 역할 분리를 위해 위와 같이 DTO 클래스를 따로 사용하는 것이 좋음
     Entity 클래스와 Controller에서 사용할 DTO는 꼭 분리해서 사용해야 함.
 */
-
-
-
-
 
 
 }

@@ -12,7 +12,8 @@ import javax.persistence.*;
 public class Posts {  //실제 DB 테이블과 매칭 될 클래스이며 보통 Entity 클래스라고도 함. JPA를 사용하면 DB 데이터에 작업할 경우 실제 쿼리를 날리기보다는, Entity 클래스의 수정을 통해 작업
 
     @Id //해당 테이블의 PK 필드(Long 타입의 auto_increment 추천)
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //PK 생성 규칙 스프링 부트 2.0에서는 GenerationType.IDENTITY 추가시에 auto_increment 가능)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //PK 생성 규칙 스프링 부트 2.0에서는 GenerationType.IDENTITY 추가시에 auto_increment 가능)
     private Long id;
 
     @Column(length = 500, nullable = false) //테이블의 컬럼을 나타냄. 따로 선언하지 않아도 해당 클래스의 필드는 모두 컬럼이 됨. 문자열의 경우 varchar(255) 기본
@@ -24,7 +25,7 @@ public class Posts {  //실제 DB 테이블과 매칭 될 클래스이며 보통
     private String author;
 
     @Builder //해당 클래스의 빌더 패턴 클래스를 생성, 생성자 상단에 선언할 경우 생성자에 포함된 빌드만 빌더에 포함됨
-    public Posts(String title, String content, String author){
+    public Posts(String title, String content, String author) {
         this.title = title;
         this.content = content;
         this.author = author;
@@ -55,7 +56,7 @@ public class Posts {  //실제 DB 테이블과 매칭 될 클래스이며 보통
 
  */
 
-    public void update(String title, String content){
+    public void update(String title, String content) {
         this.title = title;
         this.content = content;
     }
